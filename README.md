@@ -1,3 +1,3 @@
-# Ambient Sound Mixer Template
+# Ambient Sound Mixer
 
-This is the HTML/CSS/Audio only. This is the starting point in the course project. You will add the 6 JS files.
+This project was created as part of a practice section while studying the [Modern JavaScript From The Beginning 2.0](https://www.udemy.com/course/modern-javascript-from-the-beginning/) course on Udemy.
