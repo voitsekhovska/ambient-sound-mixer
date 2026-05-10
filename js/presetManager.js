@@ -9,6 +9,11 @@ export class PresetManager {
     return stored ? JSON.parse(stored) : {};
   }
 
+  // Load custom preset by id
+  loadPreset(presetId) {
+    return this.customPresets[presetId] || null;
+  }
+
   // Save custom presets to local storage
   saveCustomPresets() {
     localStorage.setItem(
@@ -24,12 +29,12 @@ export class PresetManager {
     // Create preset object with only active sounds
     const preset = {
       name,
-      sound: {},
+      sounds: {},
     };
 
     for (const [soundId, volume] of Object.entries(soundStates)) {
       if (volume > 0) {
-        preset.sound[soundId] = volume;
+        preset.sounds[soundId] = volume;
       }
     }
     this.customPresets[presetId] = preset;
